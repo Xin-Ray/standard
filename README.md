@@ -4,6 +4,15 @@
 
 这是为个人、研究者、团队及 AI 助手准备的开放规范库。它不只服务于 Slides，而是持续积累**论文、演示、邮件沟通及其他工作流程的可执行规则**。任何人都可以阅读、引用与按需改造。
 
+## 如何更新本规范库（必读）
+
+**新增或修改规则必须署名，并说明项目与来源；同时标注 P0（必须）、P1（推荐）、P2（可选）及 Core / Context / Preference 层级。** 统一使用以下表头：
+
+| ID | Level | Priority | Rule | Project / Scope | Source / Evidence | Contributor | Notes |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+
+具体执行方式见 **[CONTRIBUTING.md — 贡献与规则治理规范](CONTRIBUTING.md)**。仓库初版由 **[Xin-Ray](https://github.com/Xin-Ray)** 整理；外部导师与合作者的要求应逐条引用原始反馈，不得仅凭推测署名。
+
 ## 已有规范
 
 | Category | Standard | 内容 |
@@ -29,7 +38,7 @@
 
 - **人类使用**：打开对应规范，依据步骤执行，并用文末 Checklist 检查。
 - **AI 使用**：将对应 Markdown 文件 URL 提供给 AI，要求先读规范，再执行任务并标注不适用的例外。
-- **贡献规范**：在 `standards/<topic>/README.md` 新增条目，保持 Scope → Principles → Workflow → Examples → Checklist → References 的格式；配套配置与模板放在同目录。
+- **贡献规范**：在 `standards/<topic>/README.md` 新增条目，先遵循 [CONTRIBUTING.md](CONTRIBUTING.md) 的来源归属与优先级表，再按 Scope → Principles → Workflow → Examples → Checklist → References 组织详细说明；配套配置与模板放在同目录。
 
 ## 目录
 
