@@ -11,6 +11,7 @@
 | 📄 Research Papers | [Paper Writing & Experimental Standards](standards/papers/README.md) | 科学问题、Research Gap、方法动机、公平实验、图表及正式指南 |
 | 🎞️ Presentations | [Academic Slides Standards](standards/slides/README.md) | **Content Design**：叙事、场景图、结论式标题；**Visual Design**：版式、逐次点击、图表与一致性 |
 | 🎨 Design System | [Slides Design Tokens](standards/slides/design-tokens.json) | 颜色、文字层级、间距、语义色、动画参数 |
+| 🤖 AI Slide Generation | [Claude Guide](standards/slides/CLAUDE.md) · [Slide Patterns](standards/slides/slide-patterns.json) | 指导 Claude 按统一的视觉规则和版式生成 Slides |
 
 ## 计划扩充
 
@@ -38,7 +39,9 @@ standards/
 │   └── README.md
 └── slides/
     ├── README.md
-    └── design-tokens.json
+    ├── design-tokens.json
+    ├── slide-patterns.json
+    └── CLAUDE.md
 ```
 
 原仓库 `slides` 已更名为 `standard`。根目录旧版 [design-tokens.json](design-tokens.json) 暂时保留供历史引用；未来请使用分类目录的版本。
