@@ -1,58 +1,29 @@
-# Contribution & Rule Governance | 规范贡献与维护规则
+# Contribution Rules | 规范维护标准
 
-> **每一条规则必须可追溯：谁提出、来自哪个项目、依据是什么、是否必须执行。**
+初始规范由 **[Xin-Ray](https://github.com/Xin-Ray)** 整理，AI 可辅助撰写但不作为原始提议者。**规则越少越精，所有有效规则都必须可追溯且可检验。**
 
-维护者与最初规范整理者：**Xin-Ray**（GitHub: [@Xin-Ray](https://github.com/Xin-Ray)）。本仓库使用 AI 辅助整理文稿；**AI 整理不等于原始观点归属**。
+## 必须遵守
 
-## 优先级（所有主题一致）
+1. **数量上限**：每个一级主题类别（如 `papers`、`slides`、未来的 `email`）最多 **50 条有效规则**，包括 Core、Context、Preference 及子类别；不通过拆分文件/子类别规避限制。草案和废止记录不算有效条数，但应分别归档，不混入生效清单。
+2. **先合并后新增**：新增规则前检索现有表格；相同或高度重叠的要求合并为一条可验证的精炼规则，保留所有可核实贡献者和来源。细节放 Notes 或扩展说明，而非重复立规。
+3. **明确检验**：每条规则必须有具体 **Check / Verification**：说明检查对象、操作、判定条件；不能只写“检查质量”。不能客观检验的主观建议，写出可审阅证据和人工判断方式；缺少检验方式不得成为有效规则。
+4. **标注来源与贡献**：项目、原始材料链接/日期/页码、原始提出者、整理者必须清楚。未经证实的教授反馈记为 `Unverified`，不可署名为教授亲自提出；历史贡献者不可被后来的合并覆盖。
+5. **分层与优先级**：`Core`（跨项目通用）、`Context`（特定项目/导师）、`Preference`（风格偏好）与 P0（Must / 必须）、P1（Should / 推荐）、P2（Optional / 可选）为两条独立维度。P0 不满足需修正或记录合理例外，P1 可说明调整原因，P2 可选。
+6. **变更留痕**：PR 或 Commit 记录受影响 ID、内容变更、原因、贡献者与来源；合并/废止规则在 Changelog 记录被合并的旧 ID。优先维护精简的生效表，长篇讨论另放参考资料。
 
-| 优先级 | 名称 | 执行要求 |
-| --- | --- | --- |
-| **P0** | Must / 必须 | 强制检查；不满足须修正，或明确记录适用性例外及理由 |
-| **P1** | Should / 推荐 | 默认遵循；可以针对场景调整并说明原因 |
-| **P2** | Optional / 可选 | 风格建议或参考实践，不作为硬性门槛 |
+## 所有分类统一使用的表头
 
-**规则层级与优先级不是一回事**：`Core` = 跨项目通用原则；`Context` = 某项目、导师或场景的约束；`Preference` = 可选风格。通用原则可为 P0；项目要求也可能为 P0；具体冲突应以安全/伦理/法律、数据协议及正式投稿要求优先，不可仅以贡献者职位判定。
+| ID | Level | Priority | Rule | Verification / Pass Criteria | Project / Scope | Source / Evidence | Contributor | Notes |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| SLD-C001 | Core | P0 | 每页一个主观点 | 浏览逐页标题和内容，确认每页只有一个可复述的中心结论 | Academic Slides | 初版规范（2026-10） | Xin-Ray（整理） | 示例 ID；以对应分类正文为准 |
 
-## 统一规则表格格式（新增及维护一律使用）
+**字段要求**：ID 长期稳定、不复用；Source 写可核实原始反馈（公开链接或私有文件定位，勿公开隐私）；Contributor 区分 `Proposed by`、`Curated by`、`Reviewed by`；Notes 写适用条件、例外和状态。来源有待核实时标 `Proposed / Unverified`，不计入有效 50 条。
 
-| ID | Level | Priority | Rule | Project / Scope | Source / Evidence | Contributor | Notes |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| SLD-C001 | Core | P0 | 一页一个主要观点 | General Academic Slides | 本仓库初版整理（2026-10） | Xin-Ray | AI 辅助撰写 |
-| SLD-X001 | Context | P1 | 示例：将某项导师反馈转成可执行规则 | Project + version | 待核对：反馈邮件/批注/录音/日期 | 待核实 | **示例，未生效，不可当成真实导师原话** |
+## 更新步骤
 
-字段含义：
-- **ID**：长期稳定、不可重用。例如 `SLD-C001`（Slides/Content）、`SLD-V001`（Slides/Visual）、`PAP-C001`（Paper/Core）、`EML-C001`（Email）。重大修改保留 ID 并记录版本与变更；完全替换则废止旧规则并新增 ID。
-- **Level**：Core / Context / Preference。
-- **Priority**：P0 / P1 / P2，严格区分“必须”和“建议”。
-- **Rule**：一句可验证、可执行的要求，避免只有口号。
-- **Project / Scope**：可通用写 General；项目特定写明确项目及版本，如 `HealthCom TISA 2026 / deck v5`。
-- **Source / Evidence**：提供可访问 URL、文件、反馈日期与定位（页码/段落/邮件引用）；若资料未公开，写 `Private feedback, date, location`，**绝不泄露私有资料**。仅有转述时标注 `User recollection — unverified`。
-- **Contributor**：实际提出原始要求的人；多位贡献者按 `提议人；整理人；审核人` 标明角色，不能将 AI 文字润色当作教师提出的规则。
-- **Notes**：适用前提、例外、验证方式、状态（Proposed / Verified / Adopted / Deprecated）。
+1. 在分类中查找相似规则，先考虑合并；确认更新后**有效条数 ≤ 50**。
+2. 为每条新规写清表格全部字段，特别是 **检验方式与通过条件**。
+3. 明确来源与提议/整理贡献归属；未经验证的指导只记草案。
+4. 更新分类 README、必要的 Design Tokens/Patterns，并记录合并/变更的 ID。
 
-## 贡献步骤（每次更新必做）
-
-1. 找到具体项目/原始文件/反馈，并拆解为独立、可执行的规则，一条规则一行。
-2. 为每条规则标注 **ID、Level、Priority、Project、Source、Contributor、Notes**；来源缺失先标 `Proposed / Unverified`，不署名于推测对象。
-3. 通用规则写在对应 `standards/<topic>/README.md`；特定项目的原始反馈可另设 `standards/<topic>/sources/<project>.md`，保留项目来源与反馈摘录或非敏感摘要。
-4. 若同一规则来自多人，保留 **Original proposer** 与 **Adapted/curated by**，不可覆盖最早贡献记录。
-5. 发生冲突：先看适用范围、项目硬约束与证据；不直接删除异议，写明取舍与例外。
-6. 提交 Git commit / PR，写清新增/修改的规则 ID、来源及贡献者；重要变更在对应规范的 Changelog 记录日期与原因。
-7. 更新文档索引；AI 生成内容需要人工校验引用和归属。
-
-## 来源归属示例：教授华芳的指导
-
-以后整理华芳教授在 HealthCom / TISA PPT 中的意见时，**逐条**记录。例如：收到明确批注“限制汇报为 10 页”，才可建立：
-
-| ID | Level | Priority | Rule | Project / Scope | Source / Evidence | Contributor | Notes |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| SLD-X010 | Context | P0 | 演讲稿/幻灯片控制在 10 页以内 | HealthCom TISA 2026（示例） | 需附反馈日期及原始邮件/批注定位 | Hua Fang（若证据核实）；Xin-Ray（整理） | **示例待核验，尚未正式收录为生效规则** |
-
-不要把 Xin-Ray 的内容设计建议统一归给华芳教授；也不要把针对某一投稿的导师要求自动升级为所有 PPT 的通用 P0。若后续经验证具有通用价值，可新增 Core 规则，并保留原始贡献链。
-
-## 修订记录
-
-| Date | Change | Curator |
-| --- | --- | --- |
-| 2026-10-19 | 创建统一优先级、规则表格、来源与贡献机制 | Xin-Ray（AI-assisted drafting） |
+**教授反馈示例（未生效）**：若未来提供了华芳教授在 HealthCom TISA 项目中要求“PPT 不超过 10 页”的原始反馈，再建立项目级规则，Verification 为“统计最终 PPTX 幻灯片数量，≤10 为通过”，Contributor 写“华芳教授（提议，来源已核实）；Xin-Ray（整理）”。不能把项目约束自动提升为所有 Slides 的通用要求。
