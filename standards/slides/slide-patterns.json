@@ -1,0 +1,133 @@
+{
+  "version": "1.0.0",
+  "referenceCanvas": {
+    "width": 1920,
+    "height": 1080
+  },
+  "globalRules": {
+    "oneMessagePerSlide": true,
+    "title": "assertion",
+    "maxPrimaryVisuals": 1,
+    "clickSequence": "one logical idea per click",
+    "pdfFallback": "complete final state or duplicate pages",
+    "sourceCredits": true
+  },
+  "patterns": [
+    {
+      "id": "scenario",
+      "purpose": "Introduce concrete real-world situation before technical ideas",
+      "layout": {
+        "image": "large hero occupying 55-75% of canvas",
+        "text": "short question or takeaway in remaining area"
+      },
+      "required": [
+        "one grounded visual",
+        "one sentence research question"
+      ],
+      "reveal": [
+        "scene",
+        "question"
+      ],
+      "avoid": [
+        "unrelated decorative stock photos",
+        "dense equations"
+      ]
+    },
+    {
+      "id": "gap",
+      "purpose": "Show limitation in existing research",
+      "layout": {
+        "columns": 3,
+        "flow": "current approach -> limitation -> unmet need"
+      },
+      "required": [
+        "prior approach",
+        "concrete limitation",
+        "research gap"
+      ],
+      "reveal": [
+        "existing",
+        "limitation",
+        "gap"
+      ]
+    },
+    {
+      "id": "method",
+      "purpose": "Explain proposed model with mapping from challenges to components",
+      "layout": {
+        "type": "editable horizontal process diagram",
+        "sections": [
+          "input",
+          "temporal encoder",
+          "spatial encoder",
+          "fusion",
+          "prediction"
+        ]
+      },
+      "required": [
+        "meaningful arrows",
+        "semantic module colors"
+      ],
+      "reveal": [
+        "input",
+        "temporal",
+        "spatial",
+        "fusion",
+        "output"
+      ]
+    },
+    {
+      "id": "results",
+      "purpose": "Answer the main research question with evidence",
+      "layout": {
+        "chart": "one dominant performance comparison",
+        "takeaway": "assertion title",
+        "footer": "metric, cohort, sample size, uncertainty"
+      },
+      "required": [
+        "fair baselines",
+        "units and uncertainty",
+        "qualified conclusion"
+      ],
+      "reveal": [
+        "comparison",
+        "proposed method highlight",
+        "interpretation"
+      ]
+    },
+    {
+      "id": "ablation-interpretation",
+      "purpose": "Show components and subgroup sensitivity",
+      "layout": {
+        "visual": "one chart or small aligned multiples",
+        "annotations": "1-2 notable comparisons"
+      },
+      "required": [
+        "comparable settings",
+        "negative results if relevant"
+      ],
+      "reveal": [
+        "control",
+        "variants",
+        "conclusion"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "purpose": "Leave audience with core evidence-based contribution",
+      "layout": {
+        "takeaways": "up to three concise findings",
+        "closing": "one scientific next step"
+      },
+      "required": [
+        "scientific answer",
+        "qualification or limitation"
+      ],
+      "reveal": [
+        "question",
+        "answer",
+        "next step"
+      ]
+    }
+  ]
+}
