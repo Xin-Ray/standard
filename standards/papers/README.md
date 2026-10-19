@@ -4,6 +4,22 @@
 
 **适用范围**：以纵向健康数据、时空预测、ML/DL 为例，也可供其他实证研究调整复用。规范不是要求一定开发复杂模型，而是用可信证据回答明确问题。
 
+## Effective Rules（9/50）
+
+| ID | Level | Priority | Rule | Verification / Pass Criteria | Project / Scope | Source / Evidence | Contributor | Notes |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| PAP-C001 | Core | P0 | 全文围绕一个可检验的科学问题 | Abstract 与 Introduction 是否明确 RQ；主实验是否直接作答 | Research papers | 最初论文七标准，2026-10 | Xin-Ray（整理） | — |
+| PAP-C002 | Core | P0 | 结果解释不得超过证据支持范围 | 逐条核对主张、统计不确定性和关联/因果措辞 | Research papers | 最初论文七标准，2026-10 | Xin-Ray（整理） | — |
+| PAP-C003 | Core | P0 | 预测评估无数据泄漏且可复现 | 检查按患者划分、时间切点及仅训练集拟合预处理；复现实验指标 | Longitudinal ML | CARDIA/WHI 研究规范，2026-10 | Xin-Ray（整理） | — |
+| PAP-C004 | Core | P0 | 比较公平并披露主指标和不确定性 | 审查 baseline、相同划分/标签、指标、CI、样本量 | ML prediction | 最初论文七标准，2026-10 | Xin-Ray（整理） | — |
+| PAP-C005 | Core | P1 | Research Gap 和模型组件具有具体动机 | 逐个组件映射到数据挑战与对应消融实验 | Research papers | 最初论文七标准，2026-10 | Xin-Ray（整理） | — |
+| PAP-C006 | Core | P1 | 实验及图表回答明确问题而非堆积最高分 | 每个实验写一句被验证的问题；检查正/负结果及图注是否完整 | Research papers | 最初论文七标准，2026-10 | Xin-Ray（整理） | — |
+| PAP-X001 | Context | P1 | 验证空间信息相对纯时间模型的增益 | 比较相同划分/模型预算下的 Temporal-only 与 Spatial 结果和 CI | CARDIA/WHI | 时空论文范例，2026-10 | Xin-Ray（整理） | — |
+| PAP-X002 | Context | P1 | 比较空间表达及搬迁者分组 | 核对 State/Region/Trajectory 与 Movers/Non-movers 的样本数、增益、CI | CARDIA/WHI | 时空论文范例，2026-10 | Xin-Ray（整理） | 合并空间粒度与子组分析 |
+| PAP-X003 | Context | P1 | 实施消融和稳健性验证 | 检查去掉空间模块、更改设定、跨队列/种子的结果和负面结果 | CARDIA/WHI | 时空论文范例，2026-10 | Xin-Ray（整理） | — |
+
+以下为解释和范例，不额外计入规则数量；冲突时以有效规则表为准。
+
 ## A. 好论文的七条标准
 
 | 标准 | 核心要求 |
