@@ -1,6 +1,6 @@
 # Academic Slides Standard
 
-> Return to [Standards Library](../../README.md).
+> Return to [Standards Library](../../README.md). For AI generation also see [CLAUDE.md](CLAUDE.md) and [slide-patterns.json](slide-patterns.json).
 
 > **内容让观众愿意听，视觉让观众容易懂；每次汇报都沿用相同的设计语言。**
 
@@ -91,7 +91,7 @@
 | Ablation / Interpretation | 对比图 + 关键观察 | 消融与解释 |
 | Conclusion | 1–3 个 takeaway + 一句展望 | 收尾 |
 
-新的内容**先选择 Pattern，再填数据**；不要为每页重新发明一种设计。
+新的内容**先选择 Pattern，再填数据**；不要为每页重新发明一种设计。六种模式的机器可读布局和出现顺序见 [slide-patterns.json](slide-patterns.json)。
 
 ### 6. Token 层级与跨软件迁移
 
@@ -121,3 +121,7 @@
 - **证据**：每条主张是否有实验或材料支持，限定条件是否清楚？
 
 **核心目标：内容可以每次不同，视觉语言不变；迭代的是同一套学术设计系统。**
+
+## D. Claude / AI 生成
+
+如果使用 Claude Code，先读取 [CLAUDE.md](CLAUDE.md)，再使用 [design-tokens.json](design-tokens.json) 和 [slide-patterns.json](slide-patterns.json)。JSON 只提供规则，需要 PPTX 生成器执行；如果不支持原生逐项点击动画，应采用逐步复制页面作为退化方案，并说明限制。
