@@ -6,6 +6,22 @@
 
 本仓库提供可复用的学术研究汇报规范，分为 **Content Design（内容与叙事）** 和 **Visual Design（视觉与交互）**。适用于 AI、Computer Science、Healthcare 等研究。具体设计值见 [design-tokens.json](./design-tokens.json)。
 
+## Effective Rules（9/50）
+
+| ID | Level | Priority | Rule | Verification / Pass Criteria | Project / Scope | Source / Evidence | Contributor | Notes |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| SLD-C001 | Core | P0 | 每页只表达一个核心观点 | 逐页阅读标题和主图；能写出一个中心结论且无互不相关主题则通过 | Academic Slides | 原 Slides 规范，2026-10 | Xin-Ray（整理） | — |
+| SLD-C002 | Core | P0 | 主要结论必须有对应证据，不夸大探索结果 | 核对每个主张与原论文的图、表和不确定性；无证据的主张标 preliminary | Research presentations | 原 Slides 规范，2026-10 | Xin-Ray（整理） | — |
+| SLD-C003 | Core | P1 | 先给观点，再以场景、问题、方法、证据构成故事 | 按标题顺序朗读，看是否能连贯说明问题→解决→证据 | Research presentations | 原 Slides 7 条规则，2026-10 | Xin-Ray（整理） | 合并结论先行、总分总、故事叙事 |
+| SLD-C004 | Core | P1 | 开场使用有信息量的图片或案例解释问题 | 查看前 3 页：每张图片能指出其解释的研究场景且注明来源 | Academic Slides | 用户提出的图片要求，2026-10 | Xin-Ray（提出/整理） | 不使用无关装饰图片 |
+| SLD-C005 | Core | P1 | 图表优先，文字简洁且可远距离阅读 | 逐页检查主视觉、文字密度、轴名、单位、字号；不得整页粘贴论文段落 | Academic Slides | 原 Slides 规范，2026-10 | Xin-Ray（整理） | — |
+| SLD-V001 | Core | P1 | 所有页面统一遵守颜色、字体、间距和语义映射 | 对照 design-tokens.json 逐页检查样式，列出不一致处 | All Slides | design-tokens.json v1 | Xin-Ray（整理，AI 辅助） | 默认值可说明后调整 |
+| SLD-V002 | Core | P1 | 按讲解顺序逐次呈现复杂信息 | 演示复杂页面，检查每次点击只引入一个逻辑步骤；工具不支持则用分步页 | Live talks | 用户提出的交互要求，2026-10 | Xin-Ray（提出/整理） | 须确保最后一帧完整 |
+| SLD-V003 | Core | P0 | 静态导出不得丢失核心信息 | 查看 PDF，确认主要证据、结论、图例在无动画时可读 | PDF sharing | 原 Slides 规范，2026-10 | Xin-Ray（整理） | — |
+| SLD-V004 | Preference | P2 | 优先复用固定模式和 16:9 浅色主题 | 检查页面能否映射到 patterns.json；例外需简述原因 | All Slides | slide-patterns.json v1 | Xin-Ray（整理，AI 辅助） | 具体配色见 Token |
+
+以下章节是执行说明，不额外计入规则数量；冲突时以有效规则表为准。
+
 ## A. Content Design — 如何让内容吸引人？
 
 ### 七条核心规则
