@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "Academic Slides Design Tokens",
+  "version": "1.0.0",
+  "referenceCanvas": {
+    "width": 1920,
+    "height": 1080,
+    "ratio": "16:9"
+  },
+  "primitive": {
+    "colors": {
+      "canvas": "#F8FAFC",
+      "text": "#142338",
+      "primary": "#2563EB",
+      "method": "#0D9488",
+      "highlight": "#D97706",
+      "baseline": "#94A3B8",
+      "white": "#FFFFFF"
+    },
+    "fontFamily": [
+      "Aptos",
+      "Arial"
+    ],
+    "fontSizePt": {
+      "title": 34,
+      "body": 22,
+      "caption": 15
+    },
+    "spacingPx": [
+      8,
+      16,
+      24,
+      32
+    ],
+    "marginPx": 64,
+    "motionMs": {
+      "reveal": 350
+    }
+  },
+  "semantic": {
+    "background": "{primitive.colors.canvas}",
+    "foreground": "{primitive.colors.text}",
+    "proposedMethod": "{primitive.colors.primary}",
+    "baseline": "{primitive.colors.baseline}",
+    "methodComponent": "{primitive.colors.method}",
+    "keyHighlight": "{primitive.colors.highlight}"
+  },
+  "component": {
+    "chart": {
+      "baselineColor": "{semantic.baseline}",
+      "proposedColor": "{semantic.proposedMethod}",
+      "highlightColor": "{semantic.keyHighlight}"
+    },
+    "title": {
+      "fontSizePt": 34
+    },
+    "body": {
+      "fontSizePt": 22
+    },
+    "caption": {
+      "fontSizePt": 15
+    }
+  },
+  "motion": {
+    "default": [
+      "appear",
+      "fade"
+    ],
+    "trigger": "onClick",
+    "rule": "one logical step per click",
+    "durationMs": 350,
+    "pdfFallback": "complete final state or duplicate steps as pages"
+  },
+  "patterns": [
+    "scenario",
+    "gap",
+    "method",
+    "results",
+    "ablation-interpretation",
+    "conclusion"
+  ],
+  "notes": "Suggested defaults. Generic JSON is not directly importable as a native PowerPoint/Keynote theme."
+}
